@@ -23,6 +23,11 @@
   --btn-radius: 8px;
 
   --eyebrow-text-transform: uppercase;
+
+  --services-grid-gap: 20px;
+
+  --services-card-py: 44px;
+  --services-card-px: 26px;
 }
 
 /* Resets */
@@ -190,3 +195,19 @@ h2 {
         margin-bottom: 30px;
     }
 }
+
+.services-card-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(402px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--services-grid-gap);
+
+    padding-inline: var(--services-card-px);
+    padding-block: var(--services-card-py);
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
