@@ -14,11 +14,15 @@
   --section-py: 2rem;
 
   --h1-mb: 0;
+
   --h2-mb: 16px;
+  --h2-fs: 2rem;
 
   --btn-primary-px: 24px;
   --btn-primary-py: 14px;
   --btn-radius: 8px;
+
+  --eyebrow-text-transform: uppercase;
 }
 
 /* Resets */
@@ -44,10 +48,14 @@ h1,
 h2,
 h3 {
     color: var(--primary-color);
+    font-size: var();
+    text-transform: var(--eyebrow-text-transform);
 }
+
 
 h2 {
     margin-bottom: var(--h2-mb);
+    font-size: var(--h2-fs);
 }
 
 p {
@@ -57,7 +65,7 @@ p {
 /* Utilities */
 .wrapper {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1200px;
   margin-inline: auto;
   padding-inline: 24px;
 }
@@ -74,6 +82,7 @@ p {
     border-radius: var(--btn-radius);
     transition: var(--transition-main);
     font-weight: bold;
+    text-transform: uppercase;
 
     &:hover {
         background-color: var(--secondary-color);
@@ -91,6 +100,14 @@ p {
     bottom: -16px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.eyebrow {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 }
 
 /* Header */
@@ -153,5 +170,23 @@ h2 {
 }
 
 .easy-button {
-    margin-top: 24px;
+    margin-top: 2.4rem;
+}
+
+.easy-business p {
+    font-size: 1.2rem;
+}
+
+.services {
+    padding-block: var(--section-py);
+
+    & .eyebrow {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    & h2 {
+        max-width: 620px;
+        margin-bottom: 30px;
+    }
 }
