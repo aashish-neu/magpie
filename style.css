@@ -1,7 +1,10 @@
 /* Variables */
 :root {
   --primary-color: #00321e;
-  --secondary-color: #320014;
+  --secondary-color: #284841;
+  --accent-color: #32ffad;
+  /* --secondary-color: #320014; */
+  /* --accent-color: #964734; */
 
   --font-primary: monospace, sans-serif;
   --font-secondary: system-ui, sans-serif;
@@ -55,7 +58,7 @@ a {
 
 h1,
 h2 {
-  /* color: var(--secondary-color); */
+  color: var(--primary-color);
   font-size: var();
   text-transform: var(--eyebrow-text-transform);
 }
@@ -99,7 +102,7 @@ p {
 
 .heading-line-center {
   display: block;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   height: 4px;
   width: 12%;
 
@@ -115,6 +118,7 @@ p {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
+  color: var(--secondary-color);
 }
 
 /* Header */
@@ -277,7 +281,7 @@ h2 {
 
 .footer {
   padding-block: 16px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
 }
