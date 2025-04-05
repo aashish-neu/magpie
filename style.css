@@ -1,13 +1,20 @@
 /* Variables */
 :root {
   --primary-color: #00321e;
+  /* --primary-color: #F55F42; */
   --secondary-color: #284841;
-  --accent-color: #32ffad;
+  /* --secondary-color: #F55F42; */
+  --accent-color: #F55F42;
+  --body-color: #F7F4EE;
+  --beige-color: #F5F5DC;
+
   /* --secondary-color: #320014; */
   /* --accent-color: #964734; */
 
-  --font-primary: monospace, sans-serif;
-  --font-secondary: system-ui, sans-serif;
+  /* --font-primary: monospace, sans-serif; */
+  /* --font-secondary: system-ui, sans-serif; */
+  --font-primary: "Playfair Display";
+  --font-secondary: "Inter";
 
   --transition-main: all 0.3s ease-in-out;
 
@@ -16,13 +23,16 @@
 
   --section-py: 2rem;
 
-  --h1-mb: 0;
+  --h1-mb: 24px;
+  --h1-fs: 36px;
+  --h1-color: black;
 
   --h2-mb: 16px;
   --h2-fs: 2rem;
 
   --btn-primary-px: 24px;
   --btn-primary-py: 14px;
+  --btn-primary-color: white;
   --btn-radius: 8px;
 
   --eyebrow-text-transform: uppercase;
@@ -45,6 +55,7 @@
 
 body {
   font-family: var(--font-primary);
+  background-color: var(--body-color);
 }
 
 img {
@@ -58,9 +69,9 @@ a {
 
 h1,
 h2 {
-  color: var(--primary-color);
-  font-size: var();
-  text-transform: var(--eyebrow-text-transform);
+  /* color: var(--primary-color); */
+  line-height: 46px;
+  /* text-transform: var(--eyebrow-text-transform); */
 }
 
 h2 {
@@ -88,7 +99,7 @@ p {
   padding-inline: var(--btn-primary-px);
   padding-block: var(--btn-primary-py);
   background-color: var(--primary-color);
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--primary-color);
   border-radius: var(--btn-radius);
   transition: var(--transition-main);
   font-weight: bold;
@@ -97,6 +108,10 @@ p {
   &:hover {
     background-color: var(--secondary-color);
     cursor: pointer;
+  }
+
+  a {
+    color: var(--btn-primary-color);
   }
 }
 
@@ -125,6 +140,11 @@ p {
 
 .header {
   padding-block: var(--header-py);
+  background-image: url(./assets/about-us-banner-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
 }
 
 .header-nav {
@@ -154,7 +174,7 @@ p {
     &:hover {
       color: var(--secondary-color);
       text-decoration: underline;
-      text-underline-offset: 5px;
+      text-underline-offset: 8px;
       text-decoration-color: var(--secondary-color);
       text-decoration-thickness: 3px;
     }
@@ -165,12 +185,38 @@ p {
 
 .hero {
   padding-block: var(--section-py);
+  padding-top: 120px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 60ch;
+
+  & p {
+    font-size: 24px;
+  }
+
+  & button {
+    margin-top: 2.4rem;
+  }
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: var(--h1-fs);
   text-align: center;
+  font-weight: 600;
+  line-height: 46px;
+  margin-bottom: var(--h1-mb);
+
+  & span {
+    color: var(--secondary-color);
+  }
 }
+
+.hero-content p {
+  font-size: 24px;
+}
+
 
 /* Easy Bussiness Section */
 
@@ -182,8 +228,13 @@ h1 {
   text-align: center;
 }
 
-h2 {
+.easy-content h2 {
   margin-bottom: 42px;
+  /* color: white;
+  font-weight: bold;
+  -webkit-text-stroke: 4px;
+  -webkit-text-stroke-color: var(--primary-color);
+  -webkit-text-stroke-width: 1px; */
 }
 
 .easy-button {
