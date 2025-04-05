@@ -1,12 +1,13 @@
 /* Variables */
 :root {
-  --primary-color: #00321e;
+  --primary-color: rgba(0, 51, 31,1);
   /* --primary-color: #F55F42; */
   --secondary-color: #284841;
   /* --secondary-color: #F55F42; */
   --accent-color: #F55F42;
   --body-color: #F7F4EE;
   --beige-color: #F5F5DC;
+  --white-color: #ffffff;
 
   /* --secondary-color: #320014; */
   /* --accent-color: #964734; */
@@ -140,7 +141,7 @@ p {
 
 .header {
   padding-block: var(--header-py);
-  background-image: url(./assets/about-us-banner-img.jpg);
+  background-image: url(./assets/home-banner-img.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -185,15 +186,28 @@ p {
 
 .hero {
   padding-block: var(--section-py);
-  padding-top: 120px;
+  padding-top: 192px;
 }
 
 .hero-content {
   text-align: center;
   max-width: 60ch;
+  box-shadow: 5px 5px 5px 5px var(--primary-color);
+  padding: 1em;
+  border-radius: 8px;
+  background-color: rgba(0, 51, 31,0.5);
+  margin-inline-start: auto;
+  transition: all 0.3ms eas-in;
+
+  &:hover {
+    background-color: rgba(0, 51, 31,0.6);
+    box-shadow: 2px 2px 5px 0px var(--primary-color);
+    transform: translateX(5px);
+  }
 
   & p {
     font-size: 24px;
+    color: white;
   }
 
   & button {
@@ -207,9 +221,10 @@ h1 {
   font-weight: 600;
   line-height: 46px;
   margin-bottom: var(--h1-mb);
+  color: white;
 
   & span {
-    color: var(--secondary-color);
+    color: var(--white-color);
   }
 }
 
@@ -222,6 +237,7 @@ h1 {
 
 .easy-business {
   padding-block: var(--section-py);
+  padding-top: 100px;
 }
 
 .easy-content {
